@@ -36,7 +36,7 @@ public class Entrega {
 	
 	@OneToMany(mappedBy = "entrega", cascade = CascadeType.ALL)
 	private List<Ocorrencia> ocorrencias = new ArrayList<>();
-	
+
 	@Enumerated(EnumType.STRING)
 	private StatusEntrega status;
 	

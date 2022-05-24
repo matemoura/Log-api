@@ -30,7 +30,7 @@ public class ClienteController {
 	
 	@Autowired
 	private CatalogoClienteService catalogoClienteService;
-	
+
 	@GetMapping
 	public List<Cliente> listar() {
 		return clienteRepository.findAll();
@@ -50,8 +50,8 @@ public class ClienteController {
 	}
 	
 	@PutMapping("/{clienteId}")
-	public ResponseEntity<Cliente> atualizar(@PathVariable Long clienteId,
-		@Valid @RequestBody Cliente cliente) {
+	public ResponseEntity<Cliente> atualizar(@PathVariable Long clienteId, 
+			@Valid @RequestBody Cliente cliente) {
 		if (!clienteRepository.existsById(clienteId)) {
 			return ResponseEntity.notFound().build();
 		}
@@ -72,4 +72,5 @@ public class ClienteController {
 		
 		return ResponseEntity.noContent().build();
 	}
+	
 }

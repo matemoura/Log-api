@@ -1,5 +1,6 @@
 package com.moura.algalog.algalog.domain.service;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -10,6 +11,7 @@ import com.moura.algalog.algalog.model.Cliente;
 @Service
 public class CatalogoClienteService {
 
+	@Autowired
 	private ClienteRepository clienteRepository;
 	
 	public Cliente buscar(Long clienteId) {
