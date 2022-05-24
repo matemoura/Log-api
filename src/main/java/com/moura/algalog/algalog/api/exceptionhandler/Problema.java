@@ -22,6 +22,13 @@ public class Problema {
 		public Campo() {
 		}
 
+		public Campo(String nome, String mensagem) {
+			super();
+			this.nome = nome;
+			this.mensagem = mensagem;
+		}
+
+
 		public String getNome() {
 			return nome;
 		}
